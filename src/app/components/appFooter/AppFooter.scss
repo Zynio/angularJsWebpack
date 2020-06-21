@@ -1,0 +1,143 @@
+@import "../../../styles/colors";
+@import "../../../styles/fonts";
+
+#appFooter {
+  background-color: $grey_dark;
+
+  footer {
+    text-transform: uppercase;
+    width: 1200px;
+    height: 210px;
+    display: grid;
+    padding: 13px 0 50px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    color: $grey_light;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: $grey_light;
+
+    h1 {
+      margin: 0;
+      font-family: $roboto-black;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+      font-family: $roboto-black;
+    }
+
+    .description {
+      text-transform: none;
+      font-size: 11px;
+    }
+
+    .label {
+      margin-bottom: 13px;
+      font-size: 14px;
+    }
+
+    .small-label {
+      margin: 13px 0;
+      font-size: 14px;
+    }
+
+    .left-wrapper {
+      grid-column: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .top-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .top-left-wrapper {
+          display: flex;
+          align-items: flex-end;
+          flex-direction: column;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: row;
+          font-size: 14px;
+
+          .app_store_icon {
+            width: 66px;
+            height: 44px;
+          }
+
+          .content-left-wrapper {
+            margin-left: 9px;
+          }
+        }
+      }
+
+      .bottom-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding-top: 9px;
+        border-top: 1px solid $grey_light;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu-wrapper {
+          display: flex;
+          flex-direction: row;
+
+          a {
+            padding-right: 19px;
+          }
+        }
+
+        .social-media-wrapper {
+          display: flex;
+          flex-direction: row;
+
+          i {
+            width: 32px;
+            height: 32px;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+
+    .right-wrapper {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      grid-column: 3 / 3;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #appFooter {
+    footer {
+      height: auto;
+      width: 100%;
+      grid-template-columns: 0 1fr;
+      flex-direction: column-reverse;
+      display: flex;
+      padding: 30px 30px;
+      box-sizing: border-box;
+
+      .right-wrapper {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        grid-column: 3 / 3;
+        padding-bottom: 20px;
+      }
+    }
+
+  }
+
+}

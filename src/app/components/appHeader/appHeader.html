@@ -1,0 +1,56 @@
+<section id="app-header">
+
+    <header class="tob-bar">
+        <div class="tob-bar-toggler"
+             ng-click="$ctrl.onClickTobBarToggler()"
+             aria-label="Toggle navigation">
+            <i class="menu_icon"></i>
+        </div>
+        <div click-outside="$ctrl.onClickOutsideSideNav()"
+             ng-class="{'visible' : $ctrl.isMenuVisible}"
+             class="sidenav">
+            <div class="top">
+                <span class="title">
+                    {{ 'packages' | translate }}
+                </span>
+                <a href="#">
+                    <i class="tv_icon"></i>
+                    {{ 'television' | translate }}
+                </a>
+                <a href="#">
+                    <i class="internet_icon"></i>
+                    {{ 'internet' | translate }}
+                </a>
+                <a href="#">
+                    <i class="phone_violet_icon"></i>
+                    {{ 'phone' | translate }}
+                </a>
+                <a href="#">
+                    <i class="mobile_internet_icon"></i>
+                    {{ 'mobile_internet' | translate }}
+                </a>
+            </div>
+            <div class="middle">
+                <span class="title">{{ 'VOD' | translate }}</span>
+                <span class="description">{{ 'VOD_description' | translate }}</span>
+            </div>
+            <div class="bottom">
+                <span class="title">{{ 'tv_online' | translate }}</span>
+                <span class="description">{{ 'tv_online_description' | translate }}</span>
+            </div>
+        </div>
+        <div class="tob-bar-items">
+            <span>
+                {{ 'customer_service_center' | translate }}<i class="phone_icon"></i>
+                <span class="phone_number">{{ 'phone_number' | translate }}</span>
+            </span>
+            <span>
+                <i class="search_icon"></i> {{ 'search' | translate }}
+            </span>
+            <span>
+                <i class="avatar_icon"></i>{{ 'subscriber_zone' | translate }}
+            </span>
+        </div>
+    </header>
+
+</section>

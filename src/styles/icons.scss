@@ -1,0 +1,81 @@
+@import "img";
+
+@mixin icon($icon) {
+    width: 16px;
+    height: 16px;
+    background: url($icon) no-repeat center;
+    background-size: contain;
+    display: block;
+}
+
+i.menu_icon {
+    @include icon($menu_icon);
+}
+
+i.search_icon {
+    @include icon($search_icon);
+}
+
+i.avatar_icon {
+    @include icon($avatar_icon);
+}
+
+i.phone_icon {
+    @include icon($phone_icon);
+}
+
+i.internet_icon {
+    @include icon($internet_icon);
+}
+
+i.mobile_internet_icon {
+    @include icon($mobile_internet_icon);
+}
+
+i.phone_violet_icon {
+    @include icon($phone_violet_icon);
+}
+
+i.tv_icon {
+    @include icon($tv_icon);
+}
+
+i.arrow_left_icon {
+    @include icon($arrow_left_icon);
+}
+
+i.arrow_right_icon {
+    @include icon($arrow_right_icon);
+}
+
+i.mouse_icon {
+    @include icon($mouse_icon);
+}
+
+i.supp_icon {
+    @include icon($supp_icon);
+}
+
+i.people_icon {
+    @include icon($people_icon);
+}
+
+i.facebook_icon {
+    @include icon($facebook_icon);
+}
+
+i.twitter_icon {
+    @include icon($twitter_icon);
+}
+
+i.youtube_icon {
+    @include icon($youtube_icon);
+}
+
+i.app_store_icon {
+    @include icon($app-store-icon);
+}
+
+
+
+

@@ -1,0 +1,34 @@
+<section class="dot-slider">
+    <div class="slider-container">
+        <div class="slide">
+            <div class="content"
+                 ng-repeat="item in $ctrl.items"
+                 ng-class="{'active' : $index === $ctrl.currentViewIndex}"
+                 ng-style="{'background-image':'url({{item.image}})'}">
+                <h1>{{item.title}}</h1>
+                <div class="description">
+                    <div class="icons">
+                        <i class="mouse_icon"></i>
+                        <span>+</span>
+                        <i class="supp_icon"></i>
+                    </div>
+                    <div class="text">
+                        <div>Kup internet,</div>
+                        <div><span class="a">a</span> <b class="violet">HBO</b><span class="violet light">GO</span> </div>
+                        <div>dostaniesz za</div>
+                        <div>
+                            1<span>zł</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <div ng-repeat="item in $ctrl.items"
+                 class="dot"
+                 ng-click="$ctrl.onDotClick($index)"
+                 ng-class="{'active' : $index === $ctrl.currentViewIndex}">
+            </div>
+        </div>
+    </div>
+</section>

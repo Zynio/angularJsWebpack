@@ -1,0 +1,32 @@
+$assetPath : "/assets/img";
+$fileNameSuffix : "_icon.svg";
+
+@function get_img_path($file_name_prefix) {
+  @return '#{$assetPath}/#{$file_name_prefix}'
+}
+
+@function get_icon_path($file_name_prefix) {
+  @return '#{$assetPath}/#{$file_name_prefix}#{$fileNameSuffix}'
+}
+
+$menu_icon: get_icon_path('menu');
+$search_icon: get_icon_path('search');
+$avatar_icon: get_icon_path('avatar');
+$phone_icon: get_icon_path('phone');
+$internet_icon: get_icon_path('internet');
+$mobile_internet_icon: get_icon_path('mobile_internet');
+$phone_violet_icon: get_icon_path('phone_violet');
+$tv_icon: get_icon_path('tv');
+$arrow_right_icon: get_icon_path('arrow_right');
+$arrow_left_icon: get_icon_path('arrow_left');
+$supp_icon: get_icon_path('supp');
+$mouse_icon: get_icon_path('mause');
+$people_icon: get_icon_path('people');
+$facebook_icon: get_icon_path('facebook');
+$twitter_icon: get_icon_path('twitter');
+$youtube_icon: get_icon_path('youtube');
+$app_store_icon: get_icon_path('app_store');
+$tv_online: get_img_path('tv_online.png');
+$supp_background: get_img_path('supp_background.png');
+$app_background: get_img_path('app_background.png');
+

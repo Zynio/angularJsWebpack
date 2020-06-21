@@ -1,0 +1,41 @@
+<section class="arrow-slider">
+    <div class="slider-container">
+        <div class="slide">
+            <div class="content"
+                 ng-repeat="item in $ctrl.items"
+                 ng-class="{'active' : $index === $ctrl.currentViewIndex}"
+                 ng-style="{'background-image':'url({{item.image}})'}">
+                <div>
+                    <h1>{{item.title}}</h1>
+                    <h6>{{item.description}}</h6>
+                </div>
+                <div class="bottom-wrapper">
+                    <div class="left-wrapper">
+                        <div class="movie-title">
+                            Kapitan Ameryka:  Zimowy żołnierz
+                        </div>
+                        <div class="movie-info">
+                            <span class="type">nowości - akcja</span>
+                            <span class="price">14zł</span>
+                        </div>
+                    </div>
+                    <div class="right-wrapper">
+                        <div class="label">film obejrzy</div>
+                        <div class="count">125</div>
+                        <i class="people_icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="$ctrl.hasPrevItem()"
+             ng-click="$ctrl.onPrevItemClick()"
+             class="arrow-left arrow">
+            <i class="arrow_left_icon"></i>
+        </div>
+        <div ng-if="$ctrl.hasNextItem()"
+             ng-click="$ctrl.onNextItemClick()"
+             class="arrow-right arrow">
+            <i class="arrow_right_icon"></i>
+        </div>
+    </div>
+</section>

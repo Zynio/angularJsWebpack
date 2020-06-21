@@ -1,0 +1,63 @@
+@import "../../../styles/colors";
+@import "../../../styles/img";
+@import "../../../styles/fonts";
+@import "../../../styles/fonts";
+
+.now-in-tv_online-row {
+    height: 100%;
+    color: $white;
+    background-color: $green;
+    text-transform: uppercase;
+
+    .top-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        height: 125px;
+        box-sizing: border-box;
+        position:relative;
+
+        &:before {
+            content:'';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            width: 0;
+            height: 0;
+            border-top: solid 10px $green;
+            border-left: solid 10px transparent;
+            border-right: solid 10px transparent;
+        }
+
+        > h1 {
+            flex-grow: 1;
+        }
+
+        .live-subscriber-count-wrapper {
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 69px;
+            text-align: center;
+            justify-content: space-between;
+
+            .label {
+                font-size: 11px;
+            }
+
+            i {
+                width: 22px;
+                height: 21px;
+            }
+        }
+    }
+
+    .tv-online-wrapper {
+        background: url($tv_online) no-repeat center;
+        height: 290px;
+        width: 100%;
+    }
+}
