@@ -9,7 +9,7 @@ git rm -r --cached ..DS_Store
 /dist
 /node_modules
 /npm-debug.log
-!/blue-media-angularJs.iml
-!/yarn.lock
-!/yarn-error.log
-!/package-lock.json
+/blue-media-angularJs.iml
+/yarn.lock
+/yarn-error.log
+/package-lock.json
