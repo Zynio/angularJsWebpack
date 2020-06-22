@@ -1,8 +1,27 @@
+const sliderChangeMillis = 5000;
+
 /** @ngInject */
 export default class ArrowSliderController {
 
-    constructor() {
+    constructor($interval) {
         this.currentViewIndex = 0;
+        this.$interval = $interval;
+    }
+
+    $onInit() {
+        this.startSliderAnimation();
+    }
+
+    startSliderAnimation() {
+        const internalFunction = () => {
+            if (this.hasNextItem()) {
+                this.currentViewIndex++;
+            } else {
+                this.currentViewIndex = 0;
+            }
+        };
+
+        this.$interval(internalFunction, sliderChangeMillis);
     }
 
     hasNextItem() {
