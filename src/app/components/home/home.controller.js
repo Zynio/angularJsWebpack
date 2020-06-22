@@ -18,11 +18,17 @@ export default class HomeController {
         this.sliderArrowItems = [{
             title: "VOD",
             description: "Video na żądanie",
-            image: arrow_slider_img_1
+            image: arrow_slider_img_1,
+            movie_title: "Kapitan Ameryka:  Zimowy żołnierz",
+            movie_type: "nowości - akcja",
+            price: "14zł"
         }, {
             title: "Zyskaj więcej",
             description: "Video na żądanie",
-            image: arrow_slider_img_2
+            image: arrow_slider_img_2,
+            movie_title: "Kapitan Ameryka:  Zimowy żołnierz",
+            movie_type: "nowości - akcja",
+            price: "14zł"
         }];
     }
 
