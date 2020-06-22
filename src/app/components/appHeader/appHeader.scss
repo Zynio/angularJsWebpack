@@ -86,11 +86,12 @@
             position: absolute;
             z-index: 1;
             top: 0;
-            width: 0;
             left: 0;
+            width: 240px;
             background-color: #111;
             overflow-x: hidden;
             transition: .5s;
+            transform: translateY(-150%);
             margin-top: 80px;
 
             &:not(.visible) > * {
@@ -98,6 +99,7 @@
             }
 
             &.visible {
+                transform: translateY(0);
                 opacity: 1;
                 width: 240px;
             }
