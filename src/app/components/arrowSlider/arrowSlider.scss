@@ -30,7 +30,7 @@
 
         &.active {
           height: 100%;
-          padding: 30px;
+          padding: 27px 30px;
           opacity: 1;
         }
 
@@ -123,19 +123,15 @@
       margin: auto;
       position: absolute;
       top: 0;
-      bottom: 0;
+      bottom: 22px;
       cursor: pointer;
 
       &.arrow-left {
-        top: 0;
-        bottom: 0;
         left: 30px;
       }
 
       &.arrow-right {
-        top: 0;
         right: 30px;
-        bottom: 0;
       }
 
       i {

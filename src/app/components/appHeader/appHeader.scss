@@ -35,6 +35,7 @@
             margin-top: 17px;
             justify-content: flex-end;
             flex-grow: 1;
+            padding-right: 4px;
 
             > span {
                 display: flex;
@@ -44,16 +45,17 @@
 
                 &:not(:first-child):before {
                     content: "|";
-                    padding: 0 11px;
+                    padding: 0 22px;
                     color: $grey_divider;
                 }
 
                 .phone_number {
-                    color: $green;
+                    font-size: 15px;
+                    font-family: $roboto-black;
                 }
 
                 i {
-                    margin-right: 11px;
+                    margin-right: 13px;
 
                     &.avatar_icon {
                         width: 14px;
