@@ -29,5 +29,7 @@
   "choose" : "Wybierz",
   "now" : "teraz",
   "in_tv_online" : "w tv online",
-  "online" : "online"
+  "online" : "ogląda",
+  "movie" : "film",
+  "will_watch" : "obejrzy"
 }
