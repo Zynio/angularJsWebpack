@@ -32,12 +32,16 @@ export default class AppHeaderController {
 
     openSiteNav() {
         this.isMenuOpened = true;
-        this.$animate.addClass(this.$element[0].querySelector('#main-menu'), 'visible');
+        this.$animate.addClass(this.getMainMenuElement(), 'visible');
     };
 
     hideSiteNav() {
         this.isMenuOpened = false;
-        this.$animate.removeClass(this.$element[0].querySelector('#main-menu'), 'visible');
+        this.$animate.removeClass(this.getMainMenuElement(), 'visible');
     };
+
+    getMainMenuElement() {
+        return this.$element[0].querySelector('#main-menu');
+    }
 
 }
