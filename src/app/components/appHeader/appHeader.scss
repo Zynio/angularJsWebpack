@@ -125,7 +125,7 @@
                     font-size: 14px;
                     text-decoration: none;
                     height: 30px;
-                    border-top-color: #272727;
+                    border-top-color: $grey_divider;
                     border-top-width: 1px;
                     border-top-style: solid;
                     display: flex;
@@ -164,6 +164,46 @@
                 .description {
                     color: $grey_text;
                     font-size: 14px;
+                    margin-bottom: 20px;
+                }
+
+                .promo-wrapper {
+                    display: flex;
+                    padding: 9px 0;
+                    flex-direction: row;
+                    border-top: 1px solid $button_border_color;
+                    border-bottom: 1px solid $button_border_color;
+
+                    .movie-description {
+                        padding-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .cover {
+                            height: 74px;
+                            width: 50px;
+                        }
+
+                        .movie-label {
+                            text-transform: uppercase;
+                            font-size: 14px;
+                        }
+
+                        .movie-title {
+                            font-size: 16px;
+                            color: $grey_text;
+                        }
+
+                        .movie-type {
+                            font-size: 11px;
+                            color: $grey_font;
+                        }
+
+                        .movie-price {
+                            font-size: 14px;
+                        }
+                    }
                 }
             }
 

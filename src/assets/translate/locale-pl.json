@@ -31,5 +31,7 @@
   "in_tv_online" : "w tv online",
   "online" : "ogląda",
   "movie" : "film",
-  "will_watch" : "obejrzy"
+  "will_watch" : "obejrzy",
+  "today_in_promotion" : "dziś w promocji",
+  "buy" : "kup"
 }

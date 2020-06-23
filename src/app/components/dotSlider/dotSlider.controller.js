@@ -1,4 +1,4 @@
-const sliderChangeMillis = 5000;
+const sliderChangeMillis = 15000;
 
 /** @ngInject */
 export default class DotSliderController {

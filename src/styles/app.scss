@@ -90,6 +90,14 @@ body {
         color: $green;
     }
 
+    .blue {
+        color: $blue;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
     main {
         padding-top: 80px;
         width: 1200px;

@@ -33,6 +33,16 @@
             <div class="middle">
                 <span class="title">{{ 'VOD' | translate }}</span>
                 <span class="description">{{ 'VOD_description' | translate }}</span>
+                <div class="promo-wrapper">
+                    <img class="cover"
+                         src="{{$ctrl.promoMove.cover}}"/>
+                    <div class="movie-description">
+                        <b class="movie-label green">{{ 'today_in_promotion' | translate }}</b>
+                        <span class="movie-title">{{$ctrl.promoMove.title}}</span>
+                        <span class="movie-type">{{$ctrl.promoMove.type}}</span>
+                        <b class="movie-price blue">{{$ctrl.promoMove.price}} zł → <span class="uppercase">{{ 'buy' | translate }}</span></b>
+                    </div>
+                </div>
             </div>
             <div class="bottom">
                 <span class="title">{{ 'tv_online' | translate }}</span>
