@@ -7,6 +7,8 @@
             <i class="menu_icon"></i>
         </div>
         <div click-outside="$ctrl.onClickOutsideSideNav()"
+             opened="$ctrl.isMenuOpened"
+             id="main-menu"
              ng-class="{'visible' : $ctrl.isMenuVisible}"
              class="sidenav">
             <div class="top">

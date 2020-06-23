@@ -3,8 +3,10 @@ import promo_cover from "../../../assets/img/promo_cover.png";
 /** @ngInject */
 export default class AppHeaderController {
 
-    constructor() {
-        this.isMenuVisible = false;
+    constructor($animate, $element) {
+        this.isMenuOpened = false;
+        this.$animate = $animate;
+        this.$element = $element;
     }
 
     $onInit() {
@@ -25,19 +27,17 @@ export default class AppHeaderController {
     }
 
     onClickOutsideSideNav() {
-        setTimeout(() => {
-            if (this.isMenuVisible) {
-                this.hideSiteNav();
-            }
-        }, 1000);
+        this.hideSiteNav();
     }
 
     openSiteNav() {
-        this.isMenuVisible = true;
+        this.isMenuOpened = true;
+        this.$animate.addClass(this.$element[0].querySelector('#main-menu'), 'visible');
     };
 
     hideSiteNav() {
-        this.isMenuVisible = false;
+        this.isMenuOpened = false;
+        this.$animate.removeClass(this.$element[0].querySelector('#main-menu'), 'visible');
     };
 
 }
