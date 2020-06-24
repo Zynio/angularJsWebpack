@@ -3,3 +3,6 @@ $ yarn install
 
 # start the server
 $ yarn start
+
+# run unit tests
+$ yarn test

@@ -1,54 +1,29 @@
-var webpackConfig = require('./webpack.test.js');
+﻿// reuse webpack config
+const webpack = require("./webpack.dev");
 
-module.exports = function karmaConfig (config) {
+module.exports = config => {
     config.set({
-        frameworks: [
-            // Reference: https://github.com/karma-runner/karma-jasmine
-            // Set framework to jasmine
-            'jasmine'
-        ],
-
-        reporters: [
-            // Reference: https://github.com/mlex/karma-spec-reporter
-            // Set reporter to print detailed results to console
-            'spec',
-
-            // Reference: https://github.com/karma-runner/karma-coverage
-            // Output code coverage files
-            'coverage'
-        ],
-
-        files: [
-            // Grab all files in the app folder that contain .test.
-            'src/tests.webpack.js'
-        ],
+        basePath: "",
+        frameworks: ["jasmine"],
+        files: ["src/**/*.spec.js"],
 
         preprocessors: {
-            // Reference: http://webpack.github.io/docs/testing.html
-            // Reference: https://github.com/webpack/karma-webpack
-            // Convert files with webpack and load sourcemaps
-            'src/tests.webpack.js': ['webpack', 'sourcemap']
+            "src/**/*.spec.js": ["webpack"]
         },
 
-        browsers: [
-            // Run tests using PhantomJS
-            'PhantomJS'
-        ],
-
-        singleRun: true,
-
-        // Configure code coverage reporter
-        coverageReporter: {
-            dir: 'build/coverage/',
-            type: 'html'
-        },
-
-        webpack: webpackConfig,
-
+        webpack,
         webpackMiddleware: {
-            // webpack-dev-middleware configuration
-            // i. e.
-            stats: 'errors-only'
-        }
+            noInfo: true,
+            stats: "errors-only"
+        },
+
+        reporters: ["progress"],
+        port: 9876,
+        colors: true,
+        logLevel: config.LOG_INFO,
+        autoWatch: true,
+        browsers: ["PhantomJS"],
+        singleRun: false,
+        concurrency: Infinity
     });
 };

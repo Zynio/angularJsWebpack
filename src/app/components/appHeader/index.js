@@ -8,4 +8,6 @@ export default angular.module('app.appHeader', [])
             template,
             controller: AppHeaderController
         }
-    ).name;
+    )
+    .controller('AppHeaderController', AppHeaderController)
+    .name;
