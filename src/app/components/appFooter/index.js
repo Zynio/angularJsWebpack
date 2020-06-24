@@ -2,10 +2,13 @@ import './appFooter.scss'
 import angular from 'angular'
 import AppFooterController from "./appFooter.controller";
 import template from './appFooter.html'
+import AppHeaderController from "../appHeader/appHeader.controller";
 
 export default angular.module('app.appFooter', [])
     .component('appFooter', {
-        template,
+            template,
             controller: AppFooterController
         }
-    ).name;
+    )
+    .controller('AppFooterController', AppFooterController)
+    .name;
